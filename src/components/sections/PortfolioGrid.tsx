@@ -73,6 +73,17 @@ const portfolioCases = [
     gradient: "from-orange-400 to-red-400",
     icon: Award,
     link: "" // TODO: Add SMC Corporation project link
+  },
+  {
+    id: "aex-logistica",
+    title: "AEX Logística Expressa",
+    description: "Transportadora",
+    category: "Corporate",
+    stats: "Gestão Marketing e Audiovisual completa",
+    size: "small",
+    gradient: "from-blue-400 to-teal-400",
+    icon: Award,
+    link: "" // TODO: Add AEX Logística project link
   }
 ];
 
