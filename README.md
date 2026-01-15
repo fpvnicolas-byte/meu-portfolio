@@ -21,11 +21,12 @@ Landing page ultra-moderna para a produtora audiovisual FVA, desenvolvida com Ne
 
 ## 📱 Seções
 
-1. **Hero Section** - Título impactante com partículas flutuantes
-2. **The Builder's Origin** - Timeline responsiva da trajetória
+1. **Hero Section** - Título impactante com BackgroundBeamsWithCollision ✨
+2. **The Builder's Origin** - Timeline responsiva da trajetória com efeito Cover ✨
 3. **Tech Stack & DNA** - Pilares tecnológicos da FVA
 4. **Portfolio Excellence** - Bento Grid com cases
 5. **Vision 2026** - Projetos futuros e expansão
+6. **Background Global** - Efeito Ripple cobrindo toda a página ✨
 
 ## 🎬 Componente de Galeria
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { inter, outfit } from "@/lib/fonts";
 import "./globals.css";
+import { BackgroundRippleWrapper } from "@/components/ui/background-ripple-wrapper";
 
 export const metadata: Metadata = {
   title: "Nícolas - Future Vision Audiovisual | Onde o Código Encontra a Lente",
@@ -69,6 +70,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-black text-white min-h-screen`}
       >
+        <BackgroundRippleWrapper rows={20} cols={50} cellSize={30} />
         {children}
       </body>
     </html>

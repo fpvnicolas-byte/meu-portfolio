@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Camera, Cpu, Zap } from "lucide-react";
+import { Cover } from "@/components/ui/cover";
 
 const timelineData = [
   {
@@ -44,7 +45,7 @@ export function BuildersOrigin() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            The Builder's <span className="gradient-text">Origin</span>
+            The Builder's <Cover><span className="gradient-text">Origin</span></Cover>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             A jornada que une código e criatividade, forjando a identidade da FVA através de experiências transformadoras.
