@@ -164,7 +164,7 @@ export function TechStackDNA() {
               <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-2xl flex items-center justify-center animate-glow">
                 <Eye className="w-10 h-10 text-white" />
               </div>
-              <blockquote className="font-display text-2xl md:text-3xl font-bold text-white leading-relaxed">
+              <blockquote className="font-display text-xl md:text-2xl lg:text-3xl font-bold text-white leading-relaxed">
                 "Revolucionando a produção audiovisual através da fusão perfeita entre
                 <span className="gradient-text"> engenharia de software </span>
                 e
