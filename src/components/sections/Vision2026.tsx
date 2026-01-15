@@ -76,7 +76,7 @@ export function Vision2026() {
               <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-2xl flex items-center justify-center animate-glow">
                 <Lightbulb className="w-12 h-12 text-white" />
               </div>
-              <blockquote className="font-display text-3xl md:text-4xl font-bold text-white leading-relaxed">
+              <blockquote className="font-display text-xl md:text-2xl lg:text-3xl font-bold text-white leading-relaxed">
                 "A viabilização de um novo SaaS audiovisual e a expansão da FV como uma
                 <span className="gradient-text"> central de tecnologia e ensino </span>
                 para novos talentos, estabelecendo novos padrões para a indústria criativa."
