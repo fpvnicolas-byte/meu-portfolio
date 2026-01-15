@@ -242,3 +242,186 @@ html, body {
     position: relative !important;
   }
 }
+
+/* Print Styles for PDF Generation */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body {
+    background: black !important;
+    color: white !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .print-page {
+    page-break-inside: avoid !important;
+    page-break-after: always !important;
+    page-break-before: avoid !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    background: black !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    position: relative !important;
+    float: none !important;
+    clear: both !important;
+  }
+
+  .print-container {
+    background: black !important;
+    color: white !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove animations and transitions for print */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  /* Keep all content visible - only hide truly interactive elements */
+  button,
+  input,
+  textarea,
+  select,
+  form {
+    display: none !important;
+  }
+
+  /* Keep links visible for reference */
+  a {
+    text-decoration: underline !important;
+    color: white !important;
+  }
+
+  /* Ensure all text content is visible */
+  p, h1, h2, h3, h4, h5, h6, span, div, section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure glassmorphism works in print */
+  .glass {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+
+  /* Force flexbox to work properly in print */
+  .flex {
+    display: flex !important;
+  }
+
+  .flex-col {
+    flex-direction: column !important;
+  }
+
+  .justify-center {
+    justify-content: center !important;
+  }
+
+  .items-center {
+    align-items: center !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 2rem !important;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 2rem !important;
+  }
+
+  /* Remove grid pattern background only for print */
+  .grid-pattern {
+    background-image: none !important;
+    display: none !important;
+  }
+
+  /* Remove all gradients and complex backgrounds for clean print */
+  [class*="gradient"],
+  [class*="bg-gradient"],
+  [style*="gradient"],
+  [style*="background-image"] {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  /* Remove all color backgrounds except black */
+  [class*="bg-"]:not(.bg-black),
+  [style*="background-color"]:not([style*="background-color: black"]) {
+    background: transparent !important;
+  }
+
+  /* Remove all visual effects that cause rendering issues */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Ensure clean black and white only */
+  .print-container,
+  .print-page {
+    background: black !important;
+    color: white !important;
+  }
+
+  /* Remove any colored backgrounds from cards and components */
+  .glass,
+  [class*="glass"] {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+
+  /* Force all text to be white */
+  h1, h2, h3, h4, h5, h6, p, span, div, section {
+    color: white !important;
+  }
+
+  /* Remove any colored elements */
+  [style*="color"]:not([style*="color: white"]) {
+    color: white !important;
+  }
+}
