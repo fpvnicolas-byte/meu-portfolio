@@ -52,10 +52,10 @@ export function BuildersOrigin() {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-green-400 opacity-30" />
+          {/* Timeline Line - Hidden on mobile, visible on desktop */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-400 via-purple-400 to-green-400 opacity-30" />
 
-          <div className="space-y-20">
+          <div className="space-y-8 md:space-y-20">
             {timelineData.map((item, index) => {
               const IconComponent = item.icon;
               const isEven = index % 2 === 0;
@@ -63,15 +63,13 @@ export function BuildersOrigin() {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: isEven ? -100 : 100 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? -100 : 100 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className={`relative flex items-center ${
-                    isEven ? 'flex-row' : 'flex-row-reverse'
-                  }`}
+                  className={`relative flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
                 >
-                  {/* Timeline Node */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                  {/* Timeline Node - Mobile: positioned based on index, Desktop: center */}
+                  <div className={`relative z-10 mb-6 md:mb-0 ${isEven ? 'md:absolute md:left-1/2 md:transform md:-translate-x-1/2' : 'md:absolute md:left-1/2 md:transform md:-translate-x-1/2'}`}>
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       className="w-16 h-16 glass rounded-full flex items-center justify-center border-2 border-white/20"
@@ -81,30 +79,30 @@ export function BuildersOrigin() {
                   </div>
 
                   {/* Content Card */}
-                  <div className={`w-1/2 ${isEven ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
+                  <div className="w-full md:w-1/2 md:px-12">
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="glass glass-hover p-8 rounded-2xl"
+                      className="glass glass-hover p-6 md:p-8 rounded-2xl max-w-md md:max-w-none mx-auto md:mx-0"
                     >
                       <div className="space-y-4">
                         <div className="flex items-center gap-3 justify-center md:justify-start">
                           <div className={`w-3 h-3 rounded-full ${item.color.replace('text-', 'bg-')}`} />
-                          <span className="font-display text-2xl font-bold text-white">
+                          <span className="font-display text-xl md:text-2xl font-bold text-white">
                             {item.year}
                           </span>
                         </div>
-                        <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+                        <h3 className="font-display text-lg md:text-xl lg:text-2xl font-semibold text-white">
                           {item.title}
                         </h3>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                           {item.description}
                         </p>
                       </div>
                     </motion.div>
                   </div>
 
-                  {/* Spacer for the other side */}
-                  <div className="w-1/2" />
+                  {/* Spacer for desktop layout - only visible on md and up */}
+                  <div className="hidden md:block md:w-1/2" />
                 </motion.div>
               );
             })}

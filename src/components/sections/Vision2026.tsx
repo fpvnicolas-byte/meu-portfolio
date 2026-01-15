@@ -5,6 +5,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Rocket, Sparkles, Target, Users, Lightbulb, Globe } from "lucide-react";
 
+// Vision 2026 Links Configuration
+const visionLinks = {
+  joinRevolution: "https://wa.me/5511933604054", // WhatsApp contact
+  scheduleMeeting: "https://wa.me/5511933604054" // WhatsApp contact
+};
+
 const futureInitiatives = [
   {
     icon: Rocket,
@@ -16,7 +22,7 @@ const futureInitiatives = [
   {
     icon: Sparkles,
     title: "Centro de Ensino",
-    description: "Academia FVA: Formação especializada em produção audiovisual integrada com tecnologia.",
+    description: "Academia FV: Formação especializada em produção audiovisual integrada com tecnologia.",
     status: "Planejamento",
     timeline: "2026 Q2"
   },
@@ -54,7 +60,7 @@ export function Vision2026() {
             Vision <span className="gradient-text">2026</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            O futuro da produção audiovisual está sendo construído agora. A FVA lidera esta transformação.
+            O futuro da produção audiovisual está sendo construído agora. FV lidera esta transformação.
           </p>
         </motion.div>
 
@@ -71,7 +77,7 @@ export function Vision2026() {
                 <Lightbulb className="w-12 h-12 text-white" />
               </div>
               <blockquote className="font-display text-3xl md:text-4xl font-bold text-white leading-relaxed">
-                "A viabilização de novos SaaS audiovisuais e a expansão da FVA como uma
+                "A viabilização de um novo SaaS audiovisual e a expansão da FV como uma
                 <span className="gradient-text"> central de tecnologia e ensino </span>
                 para novos talentos, estabelecendo novos padrões para a indústria criativa."
               </blockquote>
@@ -166,14 +172,18 @@ export function Vision2026() {
               </h3>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Seja você um empreendedor visionário, um creator inovador ou uma empresa que busca transformação,
-                a FVA está construindo o futuro da produção audiovisual. Vamos criar juntos?
+                FV está construindo o futuro da produção audiovisual. Vamos criar juntos?
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="glass glass-hover px-10 py-5 rounded-2xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white font-bold text-lg flex items-center justify-center gap-3 group"
+                  onClick={() => visionLinks.joinRevolution && window.open(visionLinks.joinRevolution, '_blank')}
+                  disabled={!visionLinks.joinRevolution}
+                  className={`glass glass-hover px-10 py-5 rounded-2xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white font-bold text-lg flex items-center justify-center gap-3 group ${
+                    !visionLinks.joinRevolution ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
                   <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   <span>Junte-se à Revolução</span>
@@ -182,7 +192,11 @@ export function Vision2026() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="glass glass-hover px-10 py-5 rounded-2xl text-white font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-colors"
+                  onClick={() => visionLinks.scheduleMeeting && window.open(visionLinks.scheduleMeeting, '_blank')}
+                  disabled={!visionLinks.scheduleMeeting}
+                  className={`glass glass-hover px-10 py-5 rounded-2xl text-white font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-colors ${
+                    !visionLinks.scheduleMeeting ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
                   Agendar Reunião
                 </motion.button>
@@ -210,7 +224,7 @@ export function Vision2026() {
               "Onde o código encontra a lente, o futuro é criado."
             </p>
             <p className="text-gray-400 text-sm mt-2">
-              — FVA - Future Vision Audiovisual
+              — Nícolas - Future Vision Audiovisual
             </p>
           </div>
         </motion.div>

@@ -172,7 +172,7 @@ export function TechStackDNA() {
                 criando experiências que transcendem as fronteiras tradicionais do mercado."
               </blockquote>
               <cite className="text-gray-400 font-medium">
-                — FVA - Future Vision Audiovisual
+                — Nícolas - Future Vision Audiovisual
               </cite>
             </div>
           </div>

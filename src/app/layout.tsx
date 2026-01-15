@@ -3,12 +3,12 @@ import { inter, outfit } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FVA - Future Vision Audiovisual | Onde o Código Encontra a Lente",
-  description: "FVA: A convergência entre engenharia de software, inteligência artificial e narrativa visual de alta performance. Produtora audiovisual especializada em tecnologia e inovação.",
+  title: "Nícolas - Future Vision Audiovisual | Onde o Código Encontra a Lente",
+  description: "Nícolas: A convergência entre engenharia de software, inteligência artificial e narrativa visual de alta performance. Produtora audiovisual especializada em tecnologia e inovação.",
   keywords: ["produtora audiovisual", "desenvolvimento fullstack", "inteligência artificial", "filmmaking", "tecnologia", "SaaS audiovisuais"],
-  authors: [{ name: "FVA - Future Vision Audiovisual" }],
-  creator: "FVA - Future Vision Audiovisual",
-  publisher: "FVA - Future Vision Audiovisual",
+  authors: [{ name: "Nícolas - Future Vision Audiovisual" }],
+  creator: "Nícolas - Future Vision Audiovisual",
+  publisher: "Nícolas - Future Vision Audiovisual",
   formatDetection: {
     email: false,
     address: false,
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "FVA - Future Vision Audiovisual | Onde o Código Encontra a Lente",
+    title: "Nícolas - Future Vision Audiovisual | Onde o Código Encontra a Lente",
     description: "A convergência entre engenharia de software, inteligência artificial e narrativa visual de alta performance.",
     url: 'https://fva-audiovisual.vercel.app',
-    siteName: 'FVA - Future Vision Audiovisual',
+    siteName: 'Nícolas - Future Vision Audiovisual',
     locale: 'pt_BR',
     type: 'website',
     images: [
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'FVA - Future Vision Audiovisual',
+        alt: 'Nícolas - Future Vision Audiovisual',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "FVA - Future Vision Audiovisual | Onde o Código Encontra a Lente",
+    title: "Nícolas - Future Vision Audiovisual | Onde o Código Encontra a Lente",
     description: "A convergência entre engenharia de software, inteligência artificial e narrativa visual de alta performance.",
     images: ['/og-image.jpg'],
     creator: '@fva_audiovisual',
